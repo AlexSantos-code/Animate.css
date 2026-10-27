@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIMATE</title>
+
+    <!-- biblioteca animate  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+<div>
+    <h1 id="titulo">heartBeat</h1>
+
+    <img id="imagem" src="img/lulamolusco.gif"Paisagem natural">
+
+    <p id="texto">Clique no botão para iniciar!</p>
+
+    <button onclick="iniciar()">Iniciar animação 01</button>
+</div>
+
+<div>
+    <h1 id="titulo1">backOutUp</h1>
+
+    <img id="imagem1" src="img/lulamolusco.gif"Paisagem natural">
+
+    <p id="texto1">Clique no botão para iniciar!</p>
+
+    <button onclick="iniciar1()">Iniciar animação 02</button>
+</div>
+
+<div>
+    <h1 id="titulo2">fadeInUpBig</h1>
+
+    <img id="imagem2" src="img/lulamolusco.gif"Paisagem natural">
+
+    <p id="texto2">Clique no botão para iniciar!</p>
+
+    <button onclick="iniciar2()">Iniciar animação 03</button>
+</div>
+
+    
+    
+    
+    
+    <script>
+        function iniciar() {
+            document.getElementById("texto").innerHTML = "A animação começará em 5 segundos!";
+
+            setTimeout(function () {
+                document.getElementById("imagem").classList.add("animate__animated", "animate__heartBeat");
+
+                document.getElementById("texto").innerHTML = "Animação concluída!";
+            }, 2000);
+        }
+
+         function iniciar1() {
+            document.getElementById("texto1").innerHTML = "A animação começará em 5 segundos!";
+
+            setTimeout(function () {
+                document.getElementById("imagem1").classList.add("animate__animated", "animate__backOutUp");
+
+                document.getElementById("texto1").innerHTML = "Animação concluída!";
+            }, 2000);
+        }
+
+          function iniciar2() {
+            document.getElementById("texto2").innerHTML = "A animação começará em 5 segundos!";
+
+            setTimeout(function () {
+                document.getElementById("imagem2").classList.add("animate__animated", "animate__fadeInUpBig");
+
+                document.getElementById("texto2").innerHTML = "Animação concluída!";
+            }, 2000);
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-image: url(img/image.png);
+            padding: 30px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
+</body>
+
+</html>
